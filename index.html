@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ZX-calculus Diagram</title>
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="js/lib/d3.js"></script>
+    <script type="text/javascript" src="js/lib/json2.js"></script>
+    <script type="text/javascript" src="js/lib/evol-colorpicker.js"></script>
+    <link rel="icon" type="image/png" href="css/pen.png">
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/evol-colorpicker.css" >
+    <link rel="stylesheet" type="text/css" href="css/lib/jquery-ui.css" >
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class="mybtn btn-group">
+      <div class="canvasbtn btn-group">
+        <button id="btnPen"    type="button" class="btn btn-outline btn-default"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;Pencil</button>           
+        <button id="btnEraser" type="button" class="btn btn-outline btn-warning"><i class="fa fa-eraser" aria-hidden="true"></i>&nbsp; &nbsp;Eraser</button>
+        <button id="btnClear"  type="button" class="btn btn-outline btn-danger"><i class="fa fa-close" aria-hidden="true"></i>&nbsp; &nbsp;Clear</button>
+      </div>
+      <div class="svgbtn btn-group">
+        <button id="btnColor" type="button" class="btn btn-outline btn-default"><input type="color" id="myColor" class="colorPicker evo-cp0">&nbsp;Change Colour</button>
+        <button id="btnPost"   type="button" class="btn btn-outline btn-info"><i class="fa fa-file-code-o" aria-hidden="true"></i>&nbsp;&nbsp;Generate&nbsp;LaTeX&nbsp;Code</button>    
+        <button id="btnSave"   type="button" class="btn btn-outline btn-primary"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Download&nbsp;Image&nbsp;File</button>
+      </div>        
+    </div>
+
+    <div id="drawBox">
+      <h5>Drawing Canvas</h5>
+      <canvas id="myCanvas" width="500px" height="500px"></canvas>
+    </div>
+    <div id="svgBox">
+      <h5>SVG Preview</h5>
+      <svg id="mySvg" width="500px" height="500px">
+      </svg>
+    </div>
+
+    <div id="outputArea">
+      <h5>LaTeX Codes</h5>
+      <textarea id="pathD" style="width:1040px;height:100px;"></textarea>
+    </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>
